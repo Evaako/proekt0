@@ -1,0 +1,32 @@
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form name=&quot;search&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;key&quot;&gt;&lt;/input&gt;
+    &lt;input type=&quot;submit&quot; name=&quot;send&quot; value=&quot;Відправити&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+function sendForm(e){
+     
+    // отримуємо значення поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    if(val.length&gt;5){
+        alert(&quot;Неприпустима довжина рядка&quot;);
+        e.preventDefault();
+    }   
+    else
+        alert(&quot;Відправка дозволена&quot;);
+}
+var sendButton = document.search.send;
+sendButton.addEventListener(&quot;click&quot;, sendForm);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+printButton.addEventListener(&quot;click&quot;, printForm);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
